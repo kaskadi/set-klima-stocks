@@ -1,23 +1,23 @@
-![](https://img.shields.io/github/package-json/v/kaskadi/template-kaskadi-lambda)
+![](https://img.shields.io/github/package-json/v/kaskadi/set-klima-stocks)
 ![](https://img.shields.io/badge/code--style-standard-blue)
-![](https://img.shields.io/github/license/kaskadi/template-kaskadi-lambda?color=blue)
+![](https://img.shields.io/github/license/kaskadi/set-klima-stocks?color=blue)
 
 **GitHub Actions workflows status**
 
-[![](https://img.shields.io/github/workflow/status/kaskadi/template-kaskadi-lambda/deploy?label=deployed&logo=Amazon%20AWS)](https://github.com/kaskadi/template-kaskadi-lambda/actions?query=workflow%3Adeploy)
-[![](https://img.shields.io/github/workflow/status/kaskadi/template-kaskadi-lambda/build?label=build&logo=mocha)](https://github.com/kaskadi/template-kaskadi-lambda/actions?query=workflow%3Abuild)
+[![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/deploy?label=deployed&logo=Amazon%20AWS)](https://github.com/kaskadi/set-klima-stocks/actions?query=workflow%3Adeploy)
+[![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/build?label=build&logo=mocha)](https://github.com/kaskadi/set-klima-stocks/actions?query=workflow%3Abuild)
 <!-- Only for branches which are not release/** or master -->
-<!-- ![](https://img.shields.io/github/workflow/status/kaskadi/template-kaskadi-lambda/syntax-test?label=syntax-test&logo=serverless) -->
+<!-- ![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/syntax-test?label=syntax-test&logo=serverless) -->
 
 **CodeClimate**
 
-[![](https://img.shields.io/codeclimate/maintainability/kaskadi/template-kaskadi-lambda?label=maintainability&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-kaskadi-lambda)
-[![](https://img.shields.io/codeclimate/tech-debt/kaskadi/template-kaskadi-lambda?label=technical%20debt&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-kaskadi-lambda)
-[![](https://img.shields.io/codeclimate/coverage/kaskadi/template-kaskadi-lambda?label=test%20coverage&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/template-kaskadi-lambda)
+[![](https://img.shields.io/codeclimate/maintainability/kaskadi/set-klima-stocks?label=maintainability&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/set-klima-stocks)
+[![](https://img.shields.io/codeclimate/tech-debt/kaskadi/set-klima-stocks?label=technical%20debt&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/set-klima-stocks)
+[![](https://img.shields.io/codeclimate/coverage/kaskadi/set-klima-stocks?label=test%20coverage&logo=Code%20Climate)](https://codeclimate.com/github/kaskadi/set-klima-stocks)
 
 **LGTM**
 
-[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/template-kaskadi-lambda?label=code%20quality&logo=LGTM)](https://lgtm.com/projects/g/kaskadi/template-kaskadi-lambda/?mode=list&logo=LGTM)
+[![](https://img.shields.io/lgtm/grade/javascript/github/kaskadi/set-klima-stocks?label=code%20quality&logo=LGTM)](https://lgtm.com/projects/g/kaskadi/set-klima-stocks/?mode=list&logo=LGTM)
 
 :point_right: **Badges here** :point_left:
 
