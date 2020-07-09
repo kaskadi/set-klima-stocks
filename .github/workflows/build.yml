@@ -6,7 +6,10 @@ on:
       - 'dev'
     types: [opened, reopened, edited, synchronize]
     paths:
-      - 'template-kaskadi-lambda.js'
+      - 'serverless.yml'
+      - 'set-klima-stocks.js'
+      - 'helpers/**'
+      - 'layer/**'
       - 'test/**'
       - 'package.json'
 jobs:
