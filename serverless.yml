@@ -1,5 +1,3 @@
-# ATTENTION: when done with setting up this file, you can go into .github/workflows/deploy.yml to use the 'deploy -v' command for this action in order to deploy your lambda
-
 service:
   name: set-klima-stocks
 
@@ -16,26 +14,49 @@ provider:
   region: eu-central-1
   deploymentBucket:
     name: kaskadi-serverless-deployment-bucket
-  # update this section to use proper tags for your lambda and stack
   stackTags: 
-    app: your-app-name
+    app: kaskadi
   tags:
-    app: your-app-name
+    app: kaskadi
     service: ${self:service.name}
-    logical-unit: api-logical-unit
-    type: 's3, sns, etc.'
+    logical-unit: stocks
+    type: sqs
+
+layers:
+  SetKlimaStocksLayer:
+    path: layer
+    name: ${self:service.name}-layer
+    description: Layer for ${self:service.name}
+    compatibleRuntimes:
+      - nodejs10.x
+      - nodejs12.x
+    licenseInfo: MIT
+    package:
+      include:
+        - '**/**'
 
 functions:
   SetKlimaStocks:
     handler: set-klima-stocks.handler
     name: ${self:service.name}
+    layers:
+      - { Ref: SetKlimaStocksLayerLambdaLayer}
     package:
       include:
         - 'set-klima-stocks.js'
-        - 'node_modules/**'
-    # configure here the proper event(s) that should trigger your lambda
+        - 'helpers/**'
+    environment:
+      ES_ID: ${env:ES_ID}
+      ES_SECRET: ${env:ES_SECRET}
+      ES_ENDPOINT: ${env:ES_ENDPOINT}
     events:
-      - http:
-          method: get
-          path: hello
-          cors: true
+      - sqs:
+          arn: !GetAtt KlimaStocksUpdateQueue.Arn
+          batchSize: 1
+
+resources:
+  Resources:
+    KlimaStocksUpdateQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: klima-stocks-update-queue
