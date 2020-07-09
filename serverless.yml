@@ -52,6 +52,7 @@ functions:
     events:
       - sqs:
           arn: !GetAtt KlimaStocksUpdateQueue.Arn
+          batchSize: 1
 
 resources:
   Resources:
