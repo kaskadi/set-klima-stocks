@@ -16,9 +16,9 @@ function getOpBodyDuplet (warehouse) {
       }
     }
     var body = { doc: { stocks: {} } }
-    body.doc.stocks[warehouse] = {
+    body.doc.stocks[warehouse] = [{
       quantity: product.quantity
-    }
+    }]
     return [op, body]
   }
 }
