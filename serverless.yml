@@ -20,7 +20,7 @@ provider:
     app: kaskadi
     service: ${self:service.name}
     logical-unit: stocks
-    type: sqs
+    type: eventBridge
 
 layers:
   SetKlimaStocksLayer:
@@ -50,13 +50,10 @@ functions:
       ES_SECRET: ${env:ES_SECRET}
       ES_ENDPOINT: ${env:ES_ENDPOINT}
     events:
-      - sqs:
-          arn: !GetAtt KlimaStocksUpdateQueue.Arn
-          batchSize: 1
-
-resources:
-  Resources:
-    KlimaStocksUpdateQueue:
-      Type: AWS::SQS::Queue
-      Properties:
-        QueueName: klima-stocks-update-queue
+      - eventBridge:
+          eventBus: ${env:STOCKS_BUS_ARN}
+          pattern:
+            detail:
+              responsePayload:
+                stocksEventType:
+                  - 'klima-stocks-update'
