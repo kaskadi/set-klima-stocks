@@ -53,10 +53,3 @@ functions:
       - sqs:
           arn: !GetAtt KlimaStocksUpdateQueue.Arn
           batchSize: 1
-
-resources:
-  Resources:
-    KlimaStocksUpdateQueue:
-      Type: AWS::SQS::Queue
-      Properties:
-        QueueName: klima-stocks-update-queue
