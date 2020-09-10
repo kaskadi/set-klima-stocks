@@ -1,10 +1,10 @@
-module.exports = (msgBody) => {
+module.exports = (stocks) => {
   const warehouse = 'klima'
-  return getStockBulkBody(warehouse, msgBody).concat(getWarehouseBulkBody(warehouse))
+  return getStockBulkBody(warehouse, stocks).concat(getWarehouseBulkBody(warehouse))
 }
 
-function getStockBulkBody (warehouse, msgBody) {
-  return msgBody.flatMap(getOpBodyDuplet(warehouse))
+function getStockBulkBody (warehouse, stocks) {
+  return stocks.flatMap(getOpBodyDuplet(warehouse))
 }
 
 function getOpBodyDuplet (warehouse) {
