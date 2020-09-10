@@ -12,7 +12,7 @@ function getOpBodyDuplet (warehouse) {
     const op = {
       update: {
         _id: product.ean,
-        _index: "products"
+        _index: 'products'
       }
     }
     var body = { doc: { stocks: {} } }
@@ -28,7 +28,7 @@ function getWarehouseBulkBody (warehouse) {
     {
       update: {
         _id: warehouse,
-        _index: "warehouses"
+        _index: 'warehouses'
       }
     },
     {
