@@ -6,8 +6,7 @@
 
 [![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/deploy?label=deployed&logo=Amazon%20AWS)](https://github.com/kaskadi/set-klima-stocks/actions?query=workflow%3Adeploy)
 [![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/build?label=build&logo=mocha)](https://github.com/kaskadi/set-klima-stocks/actions?query=workflow%3Abuild)
-<!-- Only for branches which are not release/** or master -->
-<!-- ![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/syntax-test?label=syntax-test&logo=serverless) -->
+[![](https://img.shields.io/github/workflow/status/kaskadi/set-klima-stocks/syntax-check?label=syntax-check&logo=serverless)](https://github.com/kaskadi/set-klima-stocks/actions?query=workflow%3Asyntax-check)
 
 **CodeClimate**
 
