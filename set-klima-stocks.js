@@ -3,7 +3,12 @@ module.exports.handler = async (event) => {
   const setStocks = require('./helpers/set-es-stocks.js')
   return await setStocks(createBulkBody(event.detail.responsePayload.stocks))
     .then(res => {
-      console.log(JSON.stringify(res, null, 2))
+      const { items, errors } = res.body
+      const successes = items.filter(item => item.update.status === 200)
+      const fails = items.filter(item => item.update.status !== 200)
+      console.log(`Errors: ${errors}`)
+      console.log(JSON.stringify(successes, null, 2))
+      console.log(JSON.stringify(fails, null, 2))
       return res
     })
     .catch(err => {
