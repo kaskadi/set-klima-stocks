@@ -35,7 +35,7 @@ The following layers are defined in this repository:
 
 |       Name       | Sources                        | Timeout |              Handler             | Layers                                                              |
 | :--------------: | :----------------------------- | :-----: | :------------------------------: | :------------------------------------------------------------------ |
-| set-klima-stocks | <ul><li>Event Bridge</li></ul> | default | [handler](./set-klima-stocks.js) | <ul><li>[set-klima-stocks-layer](#set-klima-stocks-layer)</li></ul> |
+| set-klima-stocks | <ul><li>event bridge</li></ul> | default | [handler](./set-klima-stocks.js) | <ul><li>[set-klima-stocks-layer](#set-klima-stocks-layer)</li></ul> |
 
 See [configuration file](./serverless.yml) for more details.
 
